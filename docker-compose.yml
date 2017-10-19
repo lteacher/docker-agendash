@@ -1,0 +1,11 @@
+version: '2'
+services:
+  agendash:
+    image: joseajp/agendash
+    environment:
+      - MONGODB_HOST=127.0.0.1
+      - MONGODB_PORT=27017
+      - AGENDA_DB_NAME=agendaDb
+      - AGENDA_DB_COLLECTION=agendaCollection
+    ports:
+      - "3001:3001"
