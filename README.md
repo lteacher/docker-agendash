@@ -1,3 +1,5 @@
+[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/joseajp/agendash/)
+
 # docker-agendash
 
 A docker image for Agendash, the dashboard for [Agenda](https://github.com/rschmukler/agenda)
