@@ -1,11 +1,13 @@
 version: '2'
 services:
   agendash:
-    image: joseajp/agendash
+    build:
+      context: .
+    image: lteacher/agendash2
+    container_name: dhs-future-activity-module_agendash
+    network_mode: 'host'
     environment:
-      - MONGODB_HOST=127.0.0.1
+      - MONGODB_HOST=root:example@127.0.0.1:27017
       - MONGODB_PORT=27017
-      - AGENDA_DB_NAME=agendaDb
-      - AGENDA_DB_COLLECTION=agendaCollection
-    ports:
-      - "3001:3001"
+      - AGENDA_DB_NAME=agenda?authSource=admin
+      - PORT=4001

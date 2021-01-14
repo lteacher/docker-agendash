@@ -1,8 +1,13 @@
 FROM node:alpine
 
-LABEL maintainer="José Andrés Jarana <jose@syncrt.com>"
+LABEL maintainer="lteacher"
 
-RUN npm install agendash
+WORKDIR /usr/app
+COPY ./ /usr/app
+RUN npm install
+
+
+RUN npm install agendash2
 
 COPY app-entrypoint.sh /
 
